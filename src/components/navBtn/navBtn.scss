@@ -1,0 +1,15 @@
+.nav-btn {
+  width: 3rem;
+  height: 2.5px;
+  background-color: black;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 3rem;
+    height: 2.5px;
+    background-color: black;
+    position: absolute;
+    top: 1rem;
+  }
+}
