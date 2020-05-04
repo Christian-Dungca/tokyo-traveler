@@ -12,7 +12,7 @@ class Header extends React.Component {
                     <button> menu </button>
                 </nav>
                 <video>
-
+                    <source src="" type="video/mp4">
                 </video>
             </div>
         );
