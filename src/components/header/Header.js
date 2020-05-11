@@ -10,12 +10,16 @@ class Header extends React.Component {
         {/* navigation container */}
         <nav className="nav">
           <h1 className="nav__title"> Tokyo Traveler </h1>
-          
-          <NavBtn className="menu" />
+
+          <NavBtn
+            className="menu"
+            navIsOpen={this.props.navIsOpen}
+            toggleNav={this.props.toggleNav}
+          />
         </nav>
         {/* section for video */}
         <div className="header__video-container">
-            <Video autoPlay={true} muted={true} loop={true}/>
+          <Video autoPlay={true} muted={true} loop={true} />
         </div>
       </div>
     );

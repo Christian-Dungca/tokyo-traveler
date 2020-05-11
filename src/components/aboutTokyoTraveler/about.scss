@@ -1,0 +1,75 @@
+
+// ? Entire component 
+.about-section {
+    width: 100%;
+    height: 100vh;
+    padding-left: .5%;
+    padding-right: .5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// ? Left side containing text
+.section-text {
+    width: 60%;
+    height: 100vh;
+    color: black;
+    // background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-wrapper {
+    // background-color: red;
+    height: 60%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-section__title{
+    font-size: 6rem;
+   
+    &--top {}
+
+    &--bottom {
+        margin-bottom: 6rem;
+    }
+}
+
+.about-section__paragraph {
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    margin-bottom: 5rem;
+}
+
+.about-section__link {
+    font-weight: 300;
+    font-size: 2.4rem;
+    border-bottom: 1px solid rgb(44, 44, 44);
+    align-self: flex-end;
+    cursor: pointer;
+
+    &:hover {
+        padding-bottom: .4rem;
+        transition: all .2s ease-in-out;
+    }
+}
+
+
+// ? Right Side containing image
+.about-section__img-container {
+    width: 40%;
+    height: 100vh;
+}
+
+.about-section__img {
+    min-width: 100%;
+    height: 100%;
+    background-image: url('../../assets/unsplash-temple.jpeg');
+    background-size: cover;
+    background-position: center bottom;
+}
+
