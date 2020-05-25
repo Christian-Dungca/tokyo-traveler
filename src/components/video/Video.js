@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import japanVideo from "../../assets/japan.mp4";
 import "./video.scss";
-import gsap from "gsap";
 
 const Video = (props) => {
   return (
