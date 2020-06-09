@@ -1,9 +1,11 @@
 import React from 'react';
+import './Article.scss'
 
 const Article = (props) => {
     return (
-        <div>
-            <h1>Article Component</h1>
+        <div className="article">
+            <h1 className="article__title"> {props.title} </h1>
+            { props.content.map(paragraph => <p className="article__paragraph"> {paragraph} </p>)}
         </div>
     )
 }

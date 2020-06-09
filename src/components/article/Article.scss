@@ -1,0 +1,16 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article__title {
+    font-size: 6rem;
+}
+
+.article__paragraph {
+    width: 50%;
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+    margin-top: 5rem;
+}
