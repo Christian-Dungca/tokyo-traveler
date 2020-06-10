@@ -7,12 +7,9 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Link to="/articles">
           <div className="app">
-            {/* <LandingPage /> */}
-            {/* <Articles /> */}
+            
           </div>
-        </Link>
         <Switch>
           <Route path="/articles">
             <Articles />
