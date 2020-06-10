@@ -1,34 +1,45 @@
+.Articles {
+  width: 100vw;
+  min-height: 100vh;
+  margin-top: 40rem;
 
-.motto-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  //? testing
+  //   background-color: rgb(179, 133, 128);
+}
+
+.Article {
     width: 100vw;
     height: 100vh;
-    // background-color: pink;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    // letter-spacing: 2px;
-    font-size: 20rem;
-    line-height: 90%;
-    text-transform: uppercase;
-    
     display: flex;
-    flex-direction: column;
-    padding: 12rem;
-    align-items: flex-start;
+    margin-bottom: 20rem;
+    position: relative;
     justify-content: center;
+    align-items: center;
 
-    &__line--1 {
-        display: block;
+
+  &__img {
+    width: 56rem;
+    height: 85rem;
+    background: url("../../assets/plane_with_blue_bg.jpg");
+    background-size: cover;
+    background-position: bottom right;
+
+    &__title {
+      font-family: "Playfair Display", serif;
+      font-size: 44rem;
+      font-weight: 400;
+      letter-spacing: 5rem;
+
+      color: #DE1738;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-    
-    &__line--2 {
-        display: block;     
-    }
-    
-    &__line--3 {
-        display: block; 
-    }
-    
-    &__line--4 {
-        display: block;
-    }
+  }
 }

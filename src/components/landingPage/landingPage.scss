@@ -8,3 +8,41 @@
     position: relative;
 }
 
+.heading-container {
+
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    align-items: center;
+    
+    
+    color: white;
+    height: 20rem;
+    z-index: 5;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.heading__title {
+    // background-color: yellow;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 14rem;
+    letter-spacing: 3rem;
+
+    &--last-char {
+        letter-spacing: 0px;
+    }
+}
+
+.heading__subtitle {
+    font-family: 'Montserrat', san-serif;
+    font-weight: 500;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    align-self: flex-end;
+    text-transform: uppercase;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import LandingPage from "./components/landingPage/LandingPage";
-import Articles from "./components/articles/Articles";
+import Home from "./components/home/Home";
 
 class App extends React.Component {
   render() {
@@ -11,8 +11,8 @@ class App extends React.Component {
             
           </div>
         <Switch>
-          <Route path="/articles">
-            <Articles />
+          <Route path="/home">
+            <Home />
           </Route>
           <Route path="/">
             <LandingPage />
