@@ -6,11 +6,14 @@ const Articles = () => {
   return (
     <div className="Articles">
       {allArticles.map((article) => {
+        const backgroundImage = {
+          backgroundImage: `url(${article.imageUrl})`,
+          backgroundPosition: `${article.imagePosition}`
+        };
+
         return (
-          <div className="Article">
-            <div className="Article__img">
-              <h1 className="Article__img__title"> Time </h1>
-            </div>
+          <div className="Articles__article" style={backgroundImage}> 
+            
           </div>
         );
       })}
