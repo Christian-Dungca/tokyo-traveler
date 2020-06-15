@@ -1,11 +1,13 @@
 .btn-container {
   cursor: pointer;
-  position: relative;
+  position: fixed;
+  top: 4rem;
+  right: 8rem;
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
   overflow: hidden;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .nav-btn--top {

@@ -3,6 +3,7 @@ const allArticles = [
     {
         id: 1,
         title: 'Time',
+        titleColor: 'black',
         imageUrl: '/assets/unsplash-temple.jpeg',
         imagePosition: 'center',
         content: [
@@ -13,6 +14,7 @@ const allArticles = [
     {
         id: 2,
         title: 'Packing',
+        titleColor: 'white',
         imageUrl: '/assets/plane_with_blue_bg.jpg',
         imagePosition: 'bottom center',
         content: [
@@ -33,6 +35,7 @@ const allArticles = [
     {
         id: 4,
         title: 'Packing',
+        titleColor: 'white',
         imageUrl: '/assets/yellow-taxi.jpg',
         imagePosition: 'center',
         content: [

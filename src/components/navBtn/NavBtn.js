@@ -2,32 +2,33 @@ import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./navBtn.scss";
 
-function NavBtn(props) {
-  // setting the "state" of the button
-  const [isClicked, onClick] = useState(false);
-  // creating a refernce to button DOM element
+const NavBtn = ({ open, setOpen }) => {
   const navBtnTop = useRef(null);
   const navBtnBottom = useRef(null);
   const navBtnContainer = useRef(null);
-  const tl = gsap.timeline();
+  const tl = gsap.timeline({paused: true});
 
-  // when component mounts and unmounts change appearance
   useEffect(() => {
-    if (isClicked === true) {
-      tl.to(navBtnTop.current, {
+    if (open) {
+      tl.fromTo(navBtnTop.current, {rotate: 0, top: 0},{
         rotate: -270,
         duration: 0.5,
-        top: '50%',
-      }).to(
-        navBtnBottom.current,
+        top: "50%",
+        // backgroundColor: "white"
+      }).fromTo(
+        navBtnBottom.current, {rotate: 0, top: 0},
         {
           rotate: 360,
           duration: 0.5,
-          top: '40%', 
+          top: "40%",
+          // backgroundColor: "white"
         },
         "<"
-      );
-    } else if (isClicked === false && props.navIsOpen === true) {
+      )
+      .reversed(true)
+      .play();
+      console.log(open);
+    } else if (open === false) {
       tl.reverse();
     }
   });
@@ -35,21 +36,13 @@ function NavBtn(props) {
   return (
     <div
       className="btn-container"
-      onClick={() => onClick(!isClicked)}
       ref={navBtnContainer}
+      open={open}
+      onClick={() => setOpen(!open)}
     >
       <div className="nav-btn--top" ref={navBtnTop}></div>
       <div className="nav-btn--bottom" ref={navBtnBottom}></div>
     </div>
   );
-}
-
-//  function NavBtn(props) {
-//   return (
-//     <div className="nav-btn" onClick={() => props.toggleNavBtn}>
-
-//     </div>
-//   );
-//  }
-
+};
 export default NavBtn;

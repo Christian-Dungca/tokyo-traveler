@@ -5,18 +5,28 @@ import "./Articles.scss";
 const Articles = () => {
   return (
     <div className="Articles">
-      {allArticles.map((article) => {
-        const backgroundImage = {
-          backgroundImage: `url(${article.imageUrl})`,
-          backgroundPosition: `${article.imagePosition}`
-        };
+      <div className="articles-container">
+        {allArticles.map((article) => {
+          const backgroundImage = {
+            backgroundImage: `url(${article.imageUrl})`,
+            backgroundPosition: `${article.imagePosition}`,
+          };
 
-        return (
-          <div className="Articles__article" style={backgroundImage}> 
-            
-          </div>
-        );
-      })}
+          return (
+            <div className="article__image" style={backgroundImage}>
+              {article.titleColor === "white" ? (
+                <h1 className="article__heading article__heading--white">
+                  {article.title}
+                </h1>
+              ) : (
+                <h1 className="article__heading article__heading--black">
+                  {article.title}
+                </h1>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
