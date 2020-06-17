@@ -34,37 +34,87 @@
 .Articles {
   width: 100vw;
   height: auto;
-
-  display: flex;
-  justify-content: center;
 }
 
 .articles-container {
-  // background-color: palegoldenrod;
-  width: 94%;
-  min-height: auto;
+  width: 100%;
+  height: max-content;
+  padding: 12rem;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 55rem);
-  grid-gap: 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, calc(100vw * .4));
+  grid-gap: 3rem;
+  // background-color: rgb(75, 75, 75);
+}
 
-  .article__image {
-    border-radius: 3px;
-    background-size: cover;
+.article {
+  &-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
   }
 
-  .article__heading {
-    font-family: 'Montserrat', san-serif;
-    font-size: 2rem;
-    padding: 2rem;
-    
-    &--white {
-      color: white;
-    }
+  &__img {
+    width: 100%;
+    height: 80%;
+    // background-color: rgb(154, 230, 154);
+  }
 
-    &--black {
-      color: black;
+  &-text-container {
+    width: 100%;
+    height: 20%;
+    // background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+
+    &__title {
+      font-size: 2.8rem;
+      font-family:'Playfair Display', serif;
+      font-weight: 500;
+      letter-spacing: 2.4px;
+    }
+    
+    &__description {
+      margin-top: 1rem;
+      font-size: 2rem;
+      font-family:'Playfair Display', serif;
+      font-weight: 500;
+      letter-spacing: 2.4px;
     }
   }
 }
+
+// .articles-container {
+//   // background-color: palegoldenrod;
+//   width: 94%;
+//   min-height: auto;
+
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   grid-template-rows: repeat(4, 55rem);
+//   grid-gap: 2.5rem;
+
+//   .article__image {
+//     border-radius: 3px;
+//     background-size: cover;
+//   }
+
+//   .article__heading {
+//     font-family: 'Montserrat', san-serif;
+//     font-size: 2rem;
+//     padding: 2rem;
+
+//     &--white {
+//       color: white;
+//     }
+
+//     &--black {
+//       color: black;
+//     }
+//   }
+// }
