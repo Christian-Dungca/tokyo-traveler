@@ -1,65 +1,104 @@
-//? section for huge text on home page
-.motto-section {
-    width: 100vw;
-    height: 100vh;
-    // background-color: pink;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    // letter-spacing: 2px;
-    font-size: 20rem;
-    line-height: 90%;
-    text-transform: uppercase;
-    
-    display: flex;
-    flex-direction: column;
-    padding: 12rem;
-    padding-top: 20rem;
-    align-items: flex-start;
-    justify-content: center;
+.Home {
 
-    &__line--1 {
-        display: block;
-    }
-    
-    &__line--2 {
-        display: block;     
-    }
-    
-    &__line--3 {
-        display: block; 
-    }
-    
-    &__line--4 {
-        display: block;
-    }
-}
+  &__content-container {
+    // width: 100%;
+    // min-height: 100vh;
+    display: grid;
+    grid-template-rows: [empty] 10vh [video-bg-start] 88vh [about-start] 100vh;
+    grid-template-columns: 1fr 12fr 1fr;
+  }
 
-.overview-section {
-    font-family: 'Montserrat', sans-serif;
-    width: 100vw;
-    height: 100vh;
-    // background-color: #343a40;
-    // color: white;
-
-    padding-left: 12rem;
-    padding-top: 10rem;
+  &__video-container {
+    grid-row: video-bg-start / about-start;
+    grid-column: 2 / 3;
+    overflow: hidden;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    background-color: red;
+  }
 
-    &__title {
-        font-size: 2.5rem;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
+  &__video-content--overlay {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(68, 68, 68, .5);
+  }
 
-    &__text {
-        width: 50%;
-        font-size: 3.5rem;
-        font-weight: 500;
-
-        line-height: 180%;
-        margin-top: 3.5rem;
-    }
+  &__video-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
+
+// //? section for huge text on home page
+// .motto-section {
+//     grid-row: video-bg-start / video-bg-end;
+//     grid-column: left-gutter / right-gutter;
+//     // width: 100vw;
+//     // height: 100vh;
+//     background-color: pink;
+//     font-family: 'Playfair Display', serif;
+//     font-weight: 400;
+//     // letter-spacing: 2px;
+//     font-size: 20rem;
+//     line-height: 90%;
+//     text-transform: uppercase;
+
+//     display: flex;
+//     flex-direction: column;
+//     padding: 12rem;
+//     padding-top: 20rem;
+//     align-items: flex-start;
+//     justify-content: center;
+
+//     &__line--1 {
+//         display: block;
+//     }
+
+//     &__line--2 {
+//         display: block;
+//     }
+
+//     &__line--3 {
+//         display: block;
+//     }
+
+//     &__line--4 {
+//         display: block;
+//     }
+// }
+
+// .overview-section {
+//     font-family: 'Montserrat', sans-serif;
+//     width: 100vw;
+//     height: 100vh;
+//     // background-color: #343a40;
+//     // color: white;
+
+//     padding-left: 12rem;
+//     padding-top: 10rem;
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+
+//     &__title {
+//         font-size: 2.5rem;
+//         font-weight: 600;
+//         text-transform: uppercase;
+//     }
+
+//     &__text {
+//         width: 50%;
+//         font-size: 3.5rem;
+//         font-weight: 500;
+
+//         line-height: 180%;
+//         margin-top: 3.5rem;
+//     }
+// }

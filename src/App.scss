@@ -1,7 +1,16 @@
-@font-face {
-  font-family: "Montseratt";
-  src: url(../public/fonts/Montserrat/Montserrat-Regular.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+// .App {
+//   display: grid;
+//   // Navigation -- Title + Video Container -- About Section -- All Articles
+//   grid-template-rows: [empty-start] 10vh [empty-end] [video-bg-start] 90vh [video-bg-end] [about-start] 100vh [about-end] [articles-start] max-content [articles-end] [footer-start] 40vh [footer-end];
+//   grid-template-columns: [left-gutter] 1fr [content-begins] 12fr [content-ends] [right-gutter] 1fr;
+//   grid-column-gap: 2rem;
+// }
 
+// .motto-section{
+//   background-color: pink;
+// }
+
+// display: grid;
+// grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+// usually 8 ~ 12 ~ 16 column layout
+// grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];

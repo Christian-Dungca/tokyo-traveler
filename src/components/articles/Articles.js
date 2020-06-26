@@ -5,7 +5,7 @@ import "./Articles.scss";
 const Articles = () => {
   return (
     <div className="Articles">
-      <div className="articles-container">
+      {/* <div className="articles-container">
         {allArticles.map((article) => {
           const articleStyle = {
             backgroundImage: `url(${article.imageUrl})`,
@@ -29,7 +29,7 @@ const Articles = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };
