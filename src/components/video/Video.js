@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import japanVideo from "../../assets/japan.mp4";
 import "./video.scss";
 

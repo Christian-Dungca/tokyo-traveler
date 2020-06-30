@@ -1,104 +1,157 @@
 .Home {
+  display: grid;
+  grid-template-rows: [empty] 10vh [big-text] 100vh [about] 100vh [articles] 100vh [footer] 40vh;
+  grid-template-columns: [gutter-start] 1fr [content-start] 12fr [gutter-end] 1fr;
+}
 
-  &__content-container {
-    // width: 100%;
-    // min-height: 100vh;
-    display: grid;
-    grid-template-rows: [empty] 10vh [video-bg-start] 88vh [about-start] 100vh;
-    grid-template-columns: 1fr 12fr 1fr;
+//? section for huge text on home page
+.motto-section {
+  grid-row: big-text / about;
+  grid-column: content-start / gutter-end;
+  // background-color: pink;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  // letter-spacing: 2px;
+  font-size: 20rem;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  &__line--1 {
+    display: block;
   }
 
-  &__video-container {
-    grid-row: video-bg-start / about-start;
-    grid-column: 2 / 3;
-    overflow: hidden;
-    position: relative;
-    background-color: red;
+  &__line--2 {
+    display: block;
   }
 
-  &__video-content--overlay {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(68, 68, 68, .5);
+  &__line--3 {
+    display: block;
   }
 
-  &__video-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
+  &__line--4 {
+    display: block;
   }
 }
 
-// //? section for huge text on home page
-// .motto-section {
-//     grid-row: video-bg-start / video-bg-end;
-//     grid-column: left-gutter / right-gutter;
-//     // width: 100vw;
-//     // height: 100vh;
-//     background-color: pink;
-//     font-family: 'Playfair Display', serif;
-//     font-weight: 400;
-//     // letter-spacing: 2px;
-//     font-size: 20rem;
-//     line-height: 90%;
-//     text-transform: uppercase;
+.overview {
+  font-family: "Montserrat", sans-serif;
+  // background-color: #343a40;
+  grid-row: about / span 1;
+  grid-column: content-start / gutter-end;
 
-//     display: flex;
-//     flex-direction: column;
-//     padding: 12rem;
-//     padding-top: 20rem;
-//     align-items: flex-start;
-//     justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-row: 100%;
 
-//     &__line--1 {
-//         display: block;
-//     }
+  &-content {
+    // background-color: springgreen;
+    grid-row: 1 / -1;
+    grid-column: 1 / 7;
 
-//     &__line--2 {
-//         display: block;
-//     }
+    display: grid;
+    grid-template-columns: [gutter-start] 1fr [content-start] 6fr [gutter-end] 1fr;
+    grid-template-rows: [gutter-start] 1fr [content-top] 4fr [content-bottom] 4fr [gutter-end] 1fr;
 
-//     &__line--3 {
-//         display: block;
-//     }
+    &__title {
+      // background-color: whitesmoke;
+      grid-row: content-top / content-bottom;
+      grid-column: content-start / gutter-end;
 
-//     &__line--4 {
-//         display: block;
-//     }
-// }
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      h2 {
+        font-size: 5.5rem;
+        font-family: "Playfair Display", serif;
+        font-weight: 400;
+
+        span {
+          padding-left: 1rem;
+          background-color: rgb(218, 88, 88);
+          color: #fff;
+          // text-shadow: -4px 2px 2px rgb(167, 130, 253);
+        }
+      }
+    }
+
+    &__bottom {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      // background-color: rgb(248, 248, 140);
+      grid-row: content-bottom / gutter-end;
+      grid-column: content-start / gutter-end;
+
+      &-text {
+        width: 100%;
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 180%;
+      }
+    }
+  }
+
+  &-img-container {
+    // background-color: rgb(225, 65, 217);
+    grid-row: 1 / -1;
+    grid-column: 7 / -1;
+    
+    display: grid;
+    grid-template-columns: [gutter-start] 1fr [content-start] 6fr [gutter-end] 1fr;
+    grid-template-rows: [gutter-start] 1fr [content-start] 10fr[gutter-end] 1fr;
+    
+    &__img {
+      grid-column: gutter-start / gutter-end;
+      grid-row: content-start / gutter-end;
+      background: url(../../assets/woman-walking-red.jpg);
+      background-size: cover;
+      background-position: top;
+    }
+  }
+}
 
 // .overview-section {
-//     font-family: 'Montserrat', sans-serif;
-//     width: 100vw;
-//     height: 100vh;
-//     // background-color: #343a40;
-//     // color: white;
+//   font-family: "Montserrat", sans-serif;
+//   background-color: #343a40;
+//   grid-row: about / span 1;
+//   grid-column: content-start / gutter-end;
 
-//     padding-left: 12rem;
-//     padding-top: 10rem;
-//     position: relative;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
+//   padding-left: 12rem;
+//   padding-top: 10rem;
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
 
-//     &__title {
-//         font-size: 2.5rem;
-//         font-weight: 600;
-//         text-transform: uppercase;
-//     }
+//   &__title {
+//     font-size: 2.5rem;
+//     font-weight: 600;
+//     text-transform: uppercase;
+//   }
 
-//     &__text {
-//         width: 50%;
-//         font-size: 3.5rem;
-//         font-weight: 500;
+//   &__text {
+//     width: 50%;
+//     font-size: 3.5rem;
+//     font-weight: 500;
 
-//         line-height: 180%;
-//         margin-top: 3.5rem;
-//     }
+//     line-height: 180%;
+//     margin-top: 3.5rem;
+//   }
 // }
+
+.articles {
+  grid-row: articles / footer;
+  grid-column: content-start / gutter-end;
+  background-color: slateblue;
+}
+
+.footer {
+  grid-row: footer / -1;
+  grid-column: content-start / gutter-end;
+  background-color: slategray;
+}
