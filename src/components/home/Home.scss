@@ -1,11 +1,12 @@
 .Home {
   display: grid;
-  grid-template-rows: [empty] 10vh [big-text] 100vh [about] 100vh [articles] 100vh [footer] 40vh;
+  grid-template-rows: [empty] 10vh [big-text] 100vh [about] 100vh [articles] min-content [video] 100vh [footer] 40vh;
   grid-template-columns: [gutter-start] 1fr [content-start] 12fr [gutter-end] 1fr;
 }
 
 //? section for huge text on home page
 .motto-section {
+  overflow: hidden;
   grid-row: big-text / about;
   grid-column: content-start / gutter-end;
   // background-color: pink;
@@ -21,50 +22,59 @@
   align-items: flex-start;
   justify-content: flex-start;
 
-  &__line--1 {
-    display: block;
+  @media only screen and (max-width: 110em) {
+    font-size: 18rem;
   }
 
-  &__line--2 {
-    display: block;
+  @media only screen and (max-width: 100em) {
+    font-size: 16rem;
   }
 
-  &__line--3 {
-    display: block;
+  @media only screen and (max-width: 90em) {
+    font-size: 14rem;
   }
 
-  &__line--4 {
-    display: block;
+  @media only screen and (max-width: 75em) {
+    font-size: 13rem;
+  }
+
+  @media only screen and (max-width: 68em) {
+    font-size: 12rem;
+  }
+
+  @media only screen and (max-width: 62.5em) {
+    font-size: 10rem;
+  }
+  @media only screen and (max-width: 50em) {
+    font-size: 8rem;
   }
 }
 
 .overview {
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
   // background-color: #343a40;
   grid-row: about / span 1;
-  grid-column: content-start / gutter-end;
+  grid-column: 1 / -1;
 
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-row: 100%;
+  grid-row: 100vh;
 
   &-content {
     // background-color: springgreen;
     grid-row: 1 / -1;
-    grid-column: 1 / 7;
+    grid-column: 5 / -1;
 
     display: grid;
     grid-template-columns: [gutter-start] 1fr [content-start] 6fr [gutter-end] 1fr;
-    grid-template-rows: [gutter-start] 1fr [content-top] 4fr [content-bottom] 4fr [gutter-end] 1fr;
+    grid-template-rows: [gutter-start] 1fr [content-top] max-content [content-bottom] max-content [gutter-end] 1fr;
 
     &__title {
       // background-color: whitesmoke;
       grid-row: content-top / content-bottom;
       grid-column: content-start / gutter-end;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
+      padding-bottom: 3.5rem;
 
       h2 {
         font-size: 5.5rem;
@@ -75,7 +85,6 @@
           padding-left: 1rem;
           background-color: rgb(218, 88, 88);
           color: #fff;
-          // text-shadow: -4px 2px 2px rgb(167, 130, 253);
         }
       }
     }
@@ -99,15 +108,15 @@
   &-img-container {
     // background-color: rgb(225, 65, 217);
     grid-row: 1 / -1;
-    grid-column: 7 / -1;
-    
+    grid-column: 1 / 5;
+
     display: grid;
     grid-template-columns: [gutter-start] 1fr [content-start] 6fr [gutter-end] 1fr;
     grid-template-rows: [gutter-start] 1fr [content-start] 10fr[gutter-end] 1fr;
-    
+
     &__img {
       grid-column: gutter-start / gutter-end;
-      grid-row: content-start / gutter-end;
+      grid-row: 1 / -1;
       background: url(../../assets/woman-walking-red.jpg);
       background-size: cover;
       background-position: top;
@@ -115,43 +124,11 @@
   }
 }
 
-// .overview-section {
-//   font-family: "Montserrat", sans-serif;
-//   background-color: #343a40;
-//   grid-row: about / span 1;
-//   grid-column: content-start / gutter-end;
-
-//   padding-left: 12rem;
-//   padding-top: 10rem;
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-
-//   &__title {
-//     font-size: 2.5rem;
-//     font-weight: 600;
-//     text-transform: uppercase;
-//   }
-
-//   &__text {
-//     width: 50%;
-//     font-size: 3.5rem;
-//     font-weight: 500;
-
-//     line-height: 180%;
-//     margin-top: 3.5rem;
-//   }
-// }
-
-.articles {
-  grid-row: articles / footer;
-  grid-column: content-start / gutter-end;
-  background-color: slateblue;
+.calculator {
 }
 
 .footer {
   grid-row: footer / -1;
-  grid-column: content-start / gutter-end;
+  grid-column: 1 / -1;
   background-color: slategray;
 }
