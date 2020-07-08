@@ -124,7 +124,10 @@
   }
 }
 
-.calculator {
+.video-placeholder {
+  grid-row: video / footer;
+  grid-column: 1 / -1;
+  background-color: rgb(84, 84, 182);
 }
 
 .footer {

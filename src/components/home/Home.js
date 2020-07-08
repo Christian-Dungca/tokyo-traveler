@@ -1,7 +1,7 @@
 import React from "react";
 import Navigation from "../navigation/Navigation";
 import Articles from '../articles/Articles';
-import Video from '../video/Video';
+// import Video from '../video/Video';
 import "./Home.scss";
 
 class Home extends React.Component {
@@ -50,7 +50,8 @@ class Home extends React.Component {
           {/* Articles overview */}
           <Articles className="Home__articles" />
           {/* Video section */}
-          <Video autoPlay={true} muted={true} loop={true}/>
+          <div className="video-placeholder"></div>
+          {/* <Video autoPlay={true} muted={true} loop={true}/> */}
           {/* Footer */}
           <div className="footer"></div>
         </div>

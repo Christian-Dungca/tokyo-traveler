@@ -10,11 +10,8 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <Switch>
-            <Route path="/home">
-              <Home />
-            </Route>
             <Route path="/">
-              <LandingPage />
+              <Home />
             </Route>
           </Switch>
         </Router>

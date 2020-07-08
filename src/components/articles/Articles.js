@@ -16,7 +16,12 @@ const Articles = () => {
         articleNumber += 1;
         // returns box representing each article
         return (
-          <div className={`Articles__article box--${articleNumber}`}></div>
+          <div className={`box box--${articleNumber}`}>
+            <div className="box__overlay"> 
+              <div className="box__title">Choosing Travel Dates</div>
+              {/* <div className="box__description">Deciding on you travel date can be the hardest thing! Everyone wants travel during that perfect time. We're here to help! </div> */}
+            </div>
+          </div>
         )
       })}
     </div>
