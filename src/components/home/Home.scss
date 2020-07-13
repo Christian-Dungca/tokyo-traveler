@@ -1,6 +1,6 @@
 .Home {
   display: grid;
-  grid-template-rows: [empty] 10vh [big-text] 100vh [about] 100vh [articles] min-content [video] 100vh [footer] 40vh;
+  grid-template-rows: [empty] 10vh [big-text] 90vh [about] 100vh [articles] min-content [video] 100vh [footer] 40vh;
   grid-template-columns: [gutter-start] 1fr [content-start] 12fr [gutter-end] 1fr;
 }
 
@@ -12,42 +12,23 @@
   // background-color: pink;
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  // letter-spacing: 2px;
-  font-size: 20rem;
+  font-size: 15rem;
   line-height: 100%;
   text-transform: uppercase;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-around;
+}
 
-  @media only screen and (max-width: 110em) {
-    font-size: 18rem;
-  }
-
-  @media only screen and (max-width: 100em) {
-    font-size: 16rem;
-  }
-
-  @media only screen and (max-width: 90em) {
-    font-size: 14rem;
-  }
-
-  @media only screen and (max-width: 75em) {
-    font-size: 13rem;
-  }
-
-  @media only screen and (max-width: 68em) {
-    font-size: 12rem;
-  }
-
-  @media only screen and (max-width: 62.5em) {
-    font-size: 10rem;
-  }
-  @media only screen and (max-width: 50em) {
-    font-size: 8rem;
-  }
+.motto-container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start
 }
 
 .overview {

@@ -12,10 +12,12 @@ class Home extends React.Component {
         <div className="Home">
           {/* Big text landing screen */}
           <div className="motto-section">
-            <span className="motto-section__line--1">A simple</span>
-            <span className="motto-section__line--2">Travel guide</span>
-            <span className="motto-section__line--3">For future</span>
-            <span className="motto-section__line--4">travelers</span>
+            <div className="motto-container">
+              <span className="motto-section__line--1">A simple</span>
+              <span className="motto-section__line--2">Travel guide</span>
+              <span className="motto-section__line--3">For future</span>
+              <span className="motto-section__line--4">travelers</span>
+            </div>
           </div>
           {/* About section */}
           <div className="overview">
