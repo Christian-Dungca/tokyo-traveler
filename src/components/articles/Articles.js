@@ -7,11 +7,6 @@ const Articles = () => {
   return (
     <React.Fragment>
       <div className="Articles">
-        {/* <div className="Articles__article box--1"></div>
-      <div className="Articles__article box--2"></div>
-      <div className="Articles__article box--3"></div>
-    <div className="Articles__article box--4"></div> */}
-
         {allArticles.map((article) => {
           // counter for dynamically adding classes names
           articleNumber += 1;
@@ -23,11 +18,11 @@ const Articles = () => {
           };
           // returns box representing each article
           return (
-            <div className={`box box--${articleNumber}`} style={boxStyles}>
-              <div className="box__overlay">
-                <div className="box__title">{article.title}</div>
-                {/* <div className="box__description">Deciding on you travel date can be the hardest thing! Everyone wants travel during that perfect time. We're here to help! </div> */}
+            <div className={`box box--${articleNumber}`}>
+              <div className="box__text-container">
+                <h2>{article.title}</h2>
               </div>
+              <div className="box__img-container" style={boxStyles}></div>
             </div>
           );
         })}
