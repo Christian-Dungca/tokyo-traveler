@@ -23,10 +23,11 @@ const Articles = () => {
           };
           // returns box representing each article
           return (
-            <div className={`box box--${articleNumber}`} style={boxStyles}>
-              <div className="box__overlay">
-                <div className="box__title">{article.title}</div>
-                {/* <div className="box__description">Deciding on you travel date can be the hardest thing! Everyone wants travel during that perfect time. We're here to help! </div> */}
+            <div className={`box box--${articleNumber}`}>
+              <div className="box__img-container" style={boxStyles}></div>
+              <div className="box__text-container">
+                <h3>Choosing your travel dates</h3>
+                <p>Each season offers a different uniquness of culture into your trip. Find out when you should buy your tickets for!</p>
               </div>
             </div>
           );
