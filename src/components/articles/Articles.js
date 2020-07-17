@@ -9,30 +9,33 @@ const Articles = () => {
   let startX;
   let scrollLeft;
 
+  // handles when user "clicks"/holds mouse button down
   const handleMouseDown = (e) => {
+    // accessing the DOM element (article slider)
     const slider = sliderRef.current;
-
+    // adding a class to show user you can scroll
     slider.classList.add("active");
+    // variables will be used by handleMouseMove function 
     isDown = true;
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
-
-    console.log(slider, isDown, startX, scrollLeft);
   };
 
+  // reverts everything to default when mouse leaves/button releases
   const handleMouseUpLeave = (e) => {
     const slider = sliderRef.current;
     isDown = false;
     slider.classList.remove("active");
   };
 
+  // when mouse is down and is moved: move the slider
   const handleMouseMove = (e) => {
     if (!isDown) return;
     e.preventDefault(); 
 
     const slider = sliderRef.current;
     const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 3; //scroll-fast
+    const walk = (x - startX) * 3; // * scroll speed
     slider.scrollLeft = scrollLeft - walk;
     console.log(walk);
   }
