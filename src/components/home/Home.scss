@@ -1,6 +1,6 @@
 .Home {
   display: grid;
-  grid-template-rows: [empty] 10vh [big-text] 90vh [about] 100vh [articles] min-content [video] 100vh [footer] 40vh;
+  grid-template-rows: [empty] 10vh [big-text] 90vh [about] 100vh [articles] minmax(100vh, min-content) [video] 100vh [footer] 40vh;
   grid-template-columns: [gutter-start] 1fr [content-start] 12fr [gutter-end] 1fr;
 }
 
